@@ -1,6 +1,68 @@
-$primary-color: #333;
-$bg-color: Gainsboro;
-body {
-    color: $primary-color;
-    background-color: $bg-color;
-}
+    $primary-color: #333;
+    $bg-color: Gainsboro;
+    @media (min-width: 900px) {
+        body {
+            color: $primary-color;
+            background-color: $bg-color;
+        }
+    }
+    
+    @media (max-width: 899px) {
+        body {
+            background-color: lightskyblue;
+        }
+    }
+    
+    ol {
+        li {
+            a::before {
+                content: "Click here \21d2";
+                color: black;
+            }
+        }
+    }
+    
+    ul {
+        list-style-type: square;
+    }
+    
+    #sampleid {
+        font: italic;
+        font: bold;
+        color: white;
+        background-color: darkblue;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: black;
+        padding: 5px 10px 5px 10px;
+    }
+    
+    %message {
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        border: 1px solid black;
+        padding: 10px 20px 10px 20px;
+        margin: 20px 0px 20px 0px;
+    }
+    
+    .page1 {
+        @extend %message;
+        background-color: lightgreen;
+    }
+    
+    .page2 {
+        @extend %message;
+        background-color: orange;
+    }
+    
+    .page3 {
+        @extend %message;
+        background-color: red;
+    }
+    
+    .page4 {
+        @extend %message;
+        background-color: gray;
+    }
